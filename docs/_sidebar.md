@@ -1,6 +1,7 @@
 * [Home](/)
 * **0-Linux Lab**
   * [Linux Lab](0-Linux/Linux-Lab.md)
+  * [Core Networking Basics](0-Linux/Computers-Networking.md)
 * **1 - Cloud Security**
   * **AWS**
     * [IAM Security](1-Cloud-Security/AWS/IAM-Security.md)
@@ -15,7 +16,8 @@
     * [Workload Identity](1-Cloud-Security/GCP/Workload-Identity.md)
     * [GCP Threat Model](1-Cloud-Security/GCP/Threat-Model-GCP.md)
   * **Kubernetes Security**
-    * [K8s Architecture](1-Cloud-Security/Kubernetes-Security/K8s-Architecture.md)
+    * [K8s Architecture-Enterprise](1-Cloud-Security/Kubernetes-Security/Kubernetes-Architecture-Enterprise.md)
+    * [K8s Architecture Security Focused](1-Cloud-Security/Kubernetes-Security/K8s-Architecture.md)
     * [RBAC & NetworkPolicies](1-Cloud-Security/Kubernetes-Security/RBAC-NetworkPolicies.md)
     * [Container Hardening](1-Cloud-Security/Kubernetes-Security/Container-Hardening.md)
 * **2 - Identity, Access & Zero Trust**
