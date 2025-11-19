@@ -1,4 +1,6 @@
-* [Home] (/)
+* [Home](/)
+* **0-Linux Lab**
+  * [Linux Lab](0-Linux/Linux-Lab.md)
 * **1 - Cloud Security**
   * **AWS**
     * [IAM Security](1-Cloud-Security/AWS/IAM-Security.md)
