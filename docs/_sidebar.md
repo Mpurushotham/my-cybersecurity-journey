@@ -1,4 +1,3 @@
-# Sidebar — My Cybersecurity Journey
 
 * [Home](/)
 * **1 - Cloud Security**
