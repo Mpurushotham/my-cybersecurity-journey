@@ -4,6 +4,16 @@
 ![Updated](https://img.shields.io/badge/Updated-2025-green) 
 ![License](https://img.shields.io/badge/License-MIT-orange)
 
+## 🤝 Let’s connect and make the change.
+
+<p align="center">
+  <a href="https://purushothammuktha.com" target="_blank"><img src="https://img.shields.io/badge/Website-purushothammuktha.com-%23000000?style=for-the-badge"></a>
+  <a href="https://linkedin.com/in/mpurushotham" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"></a>
+  <a href="mailto:purushotham.muktha@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail"></a>
+  <a href="https://wa.me/+46764561036" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp"></a>
+</p>
+
+
 ## 📖 Overview
 
 Welcome to my comprehensive cybersecurity documentation repository! This living knowledge base contains **hands-on learning notes, practical tutorials, and reproducible lab playbooks** covering modern cybersecurity domains.
