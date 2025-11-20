@@ -1,3 +1,277 @@
+
+```markdown
+# Enterprise Cloud & Hybrid Networking Architecture
+
+## Network Resilience Architecture with Security Protocols
+
+```mermaid
+flowchart TD
+    subgraph INTERNET["Internet Edge Layer"]
+        direction TB
+        I1[ISP 1<br>BGP/OSPF] --> F1[Edge Firewall<br>Fortinet/Palo Alto]
+        I2[ISP 2<br>BGP/OSPF] --> F2[Edge Firewall<br>Fortinet/Palo Alto]
+        F1 --> L1[Global Load Balancer<br>F5/Azure Front Door]
+        F2 --> L1
+    end
+
+    subgraph DMZ["DMZ & Perimeter Security"]
+        direction TB
+        L1 --> WAF[Web Application Firewall<br>Azure WAF/Cloudflare]
+        WAF --> VPN[VPN Concentrator<br>IPsec/SSL VPN]
+        WAF --> PROXY[Reverse Proxy<br>HAProxy/Nginx]
+    end
+
+    subgraph CORE["Network Core Layer"]
+        direction TB
+        PROXY --> CORE_SWITCH[Core Switches<br>VLANs/VXLAN]
+        VPN --> CORE_SWITCH
+        CORE_SWITCH --> ROUTERS[Core Routers<br>MP-BGP/OSPF]
+    end
+
+    subgraph ONPREM["On-Premise Data Center"]
+        direction TB
+        ROUTERS --> DC_FW[Data Center Firewall<br>NSX/ACI]
+        DC_FW --> SERVERS[Application Servers<br>VLAN Segmentation]
+        DC_FW --> STORAGE[SAN/NAS Storage<br>iSCSI/FC/FCoE]
+        
+        subgraph HYPERVISOR["Virtualization Layer"]
+            direction TB
+            HV1[VMware vSphere<br>VLAN/VXLAN]
+            HV2[Hyper-V Cluster<br>NVGRE]
+            HV3[Kubernetes Nodes<br>CNI/Calico]
+        end
+        
+        SERVERS --> HYPERVISOR
+    end
+
+    subgraph CLOUD["Multi-Cloud Connectivity"]
+        direction TB
+        ROUTERS --> EXPRESS[Azure ExpressRoute<br>Private Peering]
+        ROUTERS --> DIRECT[AWS Direct Connect<br>BGP Communities]
+        ROUTERS --> GCVE[Google Cloud Interconnect]
+        
+        subgraph AZURE["Azure Cloud Environment"]
+            direction TB
+            VNET1[Hub VNet<br>Azure Firewall]
+            VNET2[Spoke VNet 1<br>App Services]
+            VNET3[Spoke VNet 2<br>Database]
+            VNET1 --> VNET2
+            VNET1 --> VNET3
+        end
+        
+        subgraph AWS["AWS Cloud Environment"]
+            direction TB
+            VPC1[Transit Gateway<br>Security Groups]
+            VPC2[Application VPC<br>NACLs]
+            VPC3[Data VPC<br>Security Groups]
+            VPC1 --> VPC2
+            VPC1 --> VPC3
+        end
+        
+        EXPRESS --> AZURE
+        DIRECT --> AWS
+    end
+
+    subgraph SECURITY["Security & Encryption Layer"]
+        direction TB
+        ENC1[TLS 1.3<br>HTTPS/SSL Offload]
+        ENC2[IPsec VPN<br>IKEv2/ESP]
+        ENC3[MACsec<br>L2 Encryption]
+        ENC4[AES-256<br>Data at Rest]
+        ENC5[WireGuard<br>Site-to-Site]
+    end
+
+    subgraph RESILIENCE["Network Resilience Features"]
+        direction TB
+        R1[HA Pair<br>Active-Active]
+        R2[Geo-Redundancy<br>Multi-Region]
+        R3[Auto-Failover<br>BGP/Anycast]
+        R4[Load Balancing<br>Round Robin/Least Conn]
+        R5[Circuit Breaking<br>Retry Logic]
+    end
+
+    %% Connections between layers
+    CORE_SWITCH --> ENC3
+    VPN --> ENC2
+    WAF --> ENC1
+    STORAGE --> ENC4
+    EXPRESS --> ENC5
+    
+    F1 --> R1
+    I1 --> R3
+    L1 --> R4
+    VNET1 --> R2
+    DC_FW --> R5
+
+    classDef internet fill:#0078d4,color:white,stroke:#106ebe
+    classDef dmz fill:#e81123,color:white,stroke:#c50f1f
+    classDef core fill:#107c10,color:white,stroke:#0e6c0e
+    classDef onprem fill:#8661c5,color:white,stroke:#6640a5
+    classDef cloud fill:#0099bc,color:white,stroke:#00819d
+    classDef security fill:#ff8c00,color:white,stroke:#e67e00
+    classDef resilience fill:#d83b01,color:white,stroke:#b83200
+    
+    class I1,I2,F1,F2,L1 internet
+    class WAF,VPN,PROXY dmz
+    class CORE_SWITCH,ROUTERS core
+    class DC_FW,SERVERS,STORAGE,HYPERVISOR onprem
+    class EXPRESS,DIRECT,GCVE,AZURE,AWS cloud
+    class ENC1,ENC2,ENC3,ENC4,ENC5 security
+    class R1,R2,R3,R4,R5 resilience
+```
+
+## Network Protocols & Security Matrix
+
+### Core Networking Protocols
+| Layer | Protocol | Purpose | Encryption |
+|-------|----------|---------|------------|
+| L2 | **MACsec** | Link-layer encryption | AES-128/GCM |
+| L2 | **LLDP** | Network discovery | None |
+| L3 | **BGP** | Internet routing | MD5/TCP-AO |
+| L3 | **OSPF** | Internal routing | MD5/HMAC |
+| L3 | **IPsec** | Site-to-site VPN | AES-256/IKEv2 |
+| L4 | **TCP/UDP** | Transport layer | TLS/DTLS |
+| L7 | **TLS 1.3** | Application security | AES-256-GCM |
+
+### Hybrid Connectivity Options
+```mermaid
+flowchart LR
+    subgraph CONNECTIVITY["Hybrid Connectivity Models"]
+        S2S["Site-to-Site<br>IPsec VPN"] --> FW[Firewall]
+        ER["Azure ExpressRoute<br>Private Peering"] --> ERGW[ExpressRoute Gateway]
+        DC["AWS Direct Connect<br>BGP Sessions"] --> TGW[Transit Gateway]
+        SASE["SASE Architecture<br>ZTNA/SWG/CASB"] --> POP["Global POPs"]
+        
+        FW --> COREW[Corporate WAN]
+        ERGW --> AZVNET[Azure VNet]
+        TGW --> AWSVPC[AWS VPC]
+        POP --> USERS[Remote Users]
+    end
+    
+    COREW --> AZVNET
+    COREW --> AWSVPC
+```
+
+## Security Controls & Encryption Framework
+
+### Network Security Zones
+```mermaid
+flowchart TD
+    subgraph ZONES["Defense in Depth - Security Zones"]
+        UNTRUSTED[Untrusted Zone<br>Internet] -->|TLS 1.3| DMZZ[DMZ Zone]
+        DMZZ -->|IPsec| TRUSTED[Trusted Zone<br>Internal Network]
+        TRUSTED -->|MACsec| RESTRICTED[Restricted Zone<br>Data Center]
+        RESTRICTED -->|AES-256| CRITICAL[Critical Zone<br>Database Tier]
+    end
+    
+    subgraph CONTROLS["Security Controls per Zone"]
+        UCTRL["WAF<br>DDoS Protection<br>Rate Limiting"]
+        DCTRL["NGFW<br>IPS<br>SSL Inspection"]
+        TCTRL["Microsegmentation<br>NAC<br>L7 Firewall"]
+        RCTRL["Database Firewall<br>Encryption<br>HSM"]
+    end
+    
+    UNTRUSTED --> UCTRL
+    DMZZ --> DCTRL
+    TRUSTED --> TCTRL
+    RESTRICTED --> RCTRL
+```
+
+## High Availability & Resilience Patterns
+
+### Active-Active Data Center Design
+```mermaid
+flowchart TD
+    subgraph DC1["Primary Data Center - East"]
+        A1[Active Firewall] --> B1[Core Switch A]
+        A2[Standby Firewall] --> B1
+        B1 --> C1[Router Cluster]
+        C1 --> D1[ISP A]
+        C1 --> D2[ISP B]
+    end
+    
+    subgraph DC2["Secondary Data Center - West"]
+        A3[Active Firewall] --> B2[Core Switch B]
+        A4[Standby Firewall] --> B2
+        B2 --> C2[Router Cluster]
+        C2 --> D3[ISP C]
+        C2 --> D4[ISP D]
+    end
+    
+    DC1 <-->|Dark Fiber<br>DWDM| DC2
+    
+    subgraph LOADSHARING["Global Load Sharing"]
+        GSLB[Global Server Load Balancer] --> DC1
+        GSLB --> DC2
+        GSLB --> HEALTH[Health Checks<br>&<br>Traffic Steering]
+    end
+```
+
+## Monitoring & Management
+
+### Network Operations Framework
+- **SNMP v3** - Network device monitoring
+- **NetFlow/IPFIX** - Traffic analysis
+- **sFlow** - Packet sampling for security
+- **Syslog** - Centralized logging
+- **API Integration** - Azure/AWS APIs for cloud resources
+
+### Key Performance Indicators
+- **Latency**: <50ms intra-DC, <100ms hybrid
+- **Packet Loss**: <0.1% for critical paths
+- **Availability**: 99.99% for core services
+- **Failover Time**: <30 seconds for automated failover
+
+## Implementation Considerations
+
+### Cloud-Specific Networking
+- **Azure**: VNet Peering, Route Server, Private Endpoints
+- **AWS**: Transit Gateway, PrivateLink, Route53 Resolver
+- **Google Cloud**: VPC Network Peering, Cloud Interconnect
+
+### Security Best Practices
+1. **Zero Trust** - Verify explicitly, least privilege
+2. **Defense in Depth** - Multiple security layers
+3. **Encryption Everywhere** - Data in transit and at rest
+4. **Automated Monitoring** - Real-time threat detection
+5. **Regular Audits** - Continuous compliance validation
+
+---
+
+*This architecture provides enterprise-grade networking with built-in resilience, security, and hybrid cloud integration following industry best practices.*
+```
+
+This markdown file includes:
+
+1. **Comprehensive Mermaid diagrams** showing:
+   - Complete hybrid networking architecture
+   - Security zones and controls
+   - High availability patterns
+   - Connectivity models
+
+2. **Color-coded components** for easy visualization:
+   - Internet edge (blue)
+   - DMZ (red)
+   - Core network (green)
+   - On-premise (purple)
+   - Cloud (teal)
+   - Security (orange)
+   - Resilience (red-orange)
+
+3. **Technical details** including:
+   - Network protocols at each layer
+   - Encryption standards
+   - Security controls
+   - Resilience patterns
+
+4. **Implementation guidance** with:
+   - Cloud-specific networking
+   - Security best practices
+   - Monitoring framework
+   - Performance KPIs
+
+
+
 # ✍️ Computer Networking – Fundamentals
 
 🧠 What is Computer Networking?

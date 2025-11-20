@@ -1,10 +1,10 @@
-# Zero Trust Architecture
+# Zero Trust Architecture Diagram 🚀
 
-Principles
-- Verify explicitly, least privilege, assume breach, continuous monitoring.
+## Principles
+  - Verify explicitly, least privilege, assume breach, continuous monitoring.
 
-Diagram components
-- Identity broker, policy engine, enforcement points, telemetry pipeline.
+# Diagram components
+  - Identity broker, policy engine, enforcement points, telemetry pipeline.
 
 # Zero Trust Architecture: Design & Implementation
 

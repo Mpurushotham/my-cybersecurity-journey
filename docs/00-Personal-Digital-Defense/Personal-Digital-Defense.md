@@ -8,77 +8,39 @@
 
 ![Digital Defense Institute](https://img.shields.io/badge/Focus-Security_Operations-blue) ![Training](https://img.shields.io/badge/Training-Hands--on-green) ![Level](https://img.shields.io/badge/Level-Advanced-orange)
 
-## 📖 About Us
 
-**Digital Defense Institute** is an advanced cybersecurity training provider focusing on **security operations, threat hunting, and incident response** . Our philosophy is centered on experiential learning, where hands-on practice takes precedence over passive listening .
 
-We design our courses to be immersive and engaging, providing real-world scenarios that allow participants to immediately apply what they learn. This ensures the knowledge gained is not only theoretical but also practical and applicable in real-world cybersecurity environments .
+ > *It's designed to help individuals improve their digital security and protect their privacy online. Before trap into cyber threat to your personal data, it's crucial to implement strong digital defense strategies.*
 
-## 🚀 Featured Courses
 
-### 🔍 Advanced Security Operations and Threat Hunting (ASOTH)
-Our flagship course is an intensive four-day program tailored for cybersecurity defenders specializing in detection engineering, threat hunting, adversary detection, and incident response .
+### 📝 What is Digital Defense?
 
-**What You Will Learn:**
-- **Detection Engineering Foundations**: Principles of creating robust, adaptable detection systems .
-- **Advanced Threat Hunting Techniques**: Proactive methods to seek out and identify latent threats .
-- **Adversary Detection and Analysis**: Understanding attacker tactics and mindset to strengthen defenses .
-- **Incident Response and Mitigation**: Hands-on experience managing cyber incidents from detection to post-incident analysis .
+The project at digital-defense.io is **The Ultimate Personal Security Checklist**. Here's a breakdown of its purpose and features:
 
-### 🦖 Threat Hunting & Incident Response with Velociraptor
-An in-depth, hands-on course designed to unlock the full potential of Velociraptor, transforming it from a useful tool into an indispensable part of your cybersecurity arsenal .
+*   **Objective**: To provide practical, step-by-step guidance for people to secure their digital lives. The content is a "living document" that is updated regularly by a community of contributors to reflect the latest threats and best practices.
+*   **Scope**: The checklist is extensive and categorized into different aspects of digital life:
+    *   **Authentication**: Using password managers, 2FA, and breach alerts.
+    *   **Web Browsing**: Privacy-respecting browsers, search engines, and tracker blocking.
+    *   **Communication**: Secure email and messaging providers.
+    *   **Devices**: Securing mobile phones, computers, and smart home devices.
+    *   **Other Areas**: Also covers social media, networking, personal finance, and the "human aspect" of security.
+*   **Structure for Learning**: The checklist is divided into three tiers, making it approachable for everyone:
+    *   **Essential**: Foundational security practices.
+    *   **Optional**: Additional steps for greater protection.
+    *   **Advanced**: Measures for those seeking maximum security.
 
-**Course Highlights:**
-- Velociraptor architecture and configuration .
-- Effective threat hunting techniques and custom queries .
-- Comprehensive incident response workflow .
-- Advanced features and real-world scenario labs .
 
-### 👨‍💼 So You Want to be a SOC Analyst?
-A modern approach to preparing for a Security Operations Center (SOC) analyst role, offered with a "Pay What You Can" model .
+### 💡 How You Can Use This Resource
 
-**Curriculum Includes:**
-- Setting up an Attack & Defend environment .
-- Adversary simulation techniques using Sliver framework .
-- Crafting detection and response rules with LimaCharlie EDR .
+Based on your professional background in Microsoft security architecture, here's how you might find this personal checklist useful:
 
-## 🛠️ Open Source Tools & Repositories
+- **Quick Reference Guide**: Use it as a structured reference to ensure you haven't overlooked any basic personal security measures.
+- **Educational Tool**: Recommend it to colleagues, friends, or family who are less technically inclined but want to improve their personal security posture.
+- **Source of Ideas**: The detailed breakdowns in areas like network configuration or device encryption might offer a fresh perspective or remind you of lesser-known tips.
 
-We develop and contribute to critical security tools available on GitHub :
+### 📄 Sample Template for Personal Digital Defense Page
 
-| Repository | Description | Language |
-| :--- | :--- | :--- |
-| **triage.zip** | A preconfigured Velociraptor triage collector  | Shell |
-| **lc-detectionforge** | Environment for crafting & testing LimaCharlie detection rules  | Vue |
-| **openrelik-pipeline** | Pipeline for sending forensic artifacts to OpenRelik  | Python |
-| **lcvr-to-timesketch** | Process LimaCharlie Velociraptor Triages in Timesketch  | Shell |
 
-## 📅 Upcoming Events
-
-| Event | Date | Course |
-| :--- | :--- | :--- |
-| Wild West Hackin' Fest - Mile High | February 2025 | Threat Hunting & IR with Velociraptor  |
-| x33fcon | June 2025 | Threat Hunting & IR with Velociraptor  |
-| Black Hat USA | August 2025 | Advanced Security Operations & Threat Hunting  |
-| Wild West Hackin' Fest | October 2025 | Threat Hunting & IR with Velociraptor  |
-
-## 👥 Our Team
-
-The institute was founded and is led by industry experts including **Eric Capuano**, **Whitney Champion**, and **Matt Bromiley** - seasoned professionals with extensive experience in security operations and incident response who provide valuable insights that go beyond textbook knowledge .
-
-## 💼 Private Training
-
-We offer private training options tailored to your organization's needs. Whether you prefer virtual sessions or on-site training at your location, we can bring our expertise directly to your team .
-
-## 📞 Contact & Resources
-
-- **Website**: [https://digitaldefenseinstitute.com](https://digitaldefenseinstitute.com) 
-- **GitHub**: [Digital-Defense-Institute](https://github.com/Digital-Defense-Institute) 
-- **LinkedIn**: [Digital Defense Institute](https://www.linkedin.com/company/digital-defense-institute) 
-
----
-
-> **"This was my first Black Hat experience, and this course exceeded my expectations. I will be going back to my job with several new skills."** - Former Student 
 
 <div align="center">
 
