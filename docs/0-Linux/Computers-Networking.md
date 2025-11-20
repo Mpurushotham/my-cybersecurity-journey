@@ -692,13 +692,13 @@ You must use the main door (default gateway).
 
 # 🗺️ Analogy
 
-# Think of route tables as:
+	# Think of route tables as:
 
-# •	“If you want to go to city A, take highway 1.”
+	 •	“If you want to go to city A, take highway 1.”
 
-# •	“If you want to go to city B, take highway 2.”
+	 •	“If you want to go to city B, take highway 2.”
 
-# •	“If you don’t know → take the default highway.”
+	 •	“If you don’t know → take the default highway.”
  
 
 # ✍️ Network Security Group (NSG)
@@ -707,23 +707,23 @@ You must use the main door (default gateway).
 
 # NSG = door security guard for:
 
-# •	Subnets
+	# •	Subnets
 
-# •	NICs
+	# •	NICs
 
-# •	VM interfaces
+	# •	VM interfaces
 
 # NSG rules:
 
 # Inbound:
 
-# Allow 80 from Internet
+	# Allow 80 from Internet
 
-# Allow 22 from MyIP
+	# Allow 22 from MyIP
 
 # Outbound:
 
-# Allow All
+	# Allow All
  
 
 # 🚨 Real analogy
