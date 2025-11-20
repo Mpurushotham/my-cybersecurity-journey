@@ -2,12 +2,15 @@
 * **0-Linux Lab**
   * [Linux Lab](0-Linux/Linux-Lab.md)
   * [Core Networking Basics](0-Linux/Computers-Networking.md)
+* **TryHackMe**
+  * [Tryhackme-Labs](TryHackMe/tryhackme-paths.md)
 * **1 - Cloud Security**
   * **AWS**
     * [IAM Security](1-Cloud-Security/AWS/IAM-Security.md)
     * [Networking & Firewalls](1-Cloud-Security/AWS/Networking-Firewalls.md)
     * [AWS Threat Model](1-Cloud-Security/AWS/Threat-Model-AWS.md)
   * **Azure**
+    * [Microsoft Security Stack](1-Cloud-Security/Azure/Microsoft-Security-Stack.md)
     * [Entra ID Security](1-Cloud-Security/Azure/Entra-ID-Security.md)
     * [Defender for Cloud](1-Cloud-Security/Azure/Defender-for-Cloud.md)
     * [Azure Threat Model](1-Cloud-Security/Azure/Threat-Model-Azure.md)
@@ -17,7 +20,7 @@
     * [GCP Threat Model](1-Cloud-Security/GCP/Threat-Model-GCP.md)
   * **Kubernetes Security**
     * [K8s Architecture-Enterprise](1-Cloud-Security/Kubernetes-Security/Kubernetes-Architecture-Enterprise.md)
-    * [K8s Architecture Security Focused](1-Cloud-Security/Kubernetes-Security/K8s-Architecture.md)
+    * [K8s Architecture Security Focused](1-Cloud-Security/Kubernetes-Security/K8s-Architecture-Security-Focused.md)
     * [RBAC & NetworkPolicies](1-Cloud-Security/Kubernetes-Security/RBAC-NetworkPolicies.md)
     * [Container Hardening](1-Cloud-Security/Kubernetes-Security/Container-Hardening.md)
 * **2 - Identity, Access & Zero Trust**
@@ -35,8 +38,11 @@
   * [Prompt Security](3-AI-Security-ML-Safety/Prompt-Security.md)
   * [GenAI Threat Model](3-AI-Security-ML-Safety/GenAI-Threat-Model.md)
 * **4 - Security Automation & Engineering**
-  * [Automated IR Playbooks](4-Security-Automation-And-Engineering/Automated-IR-Playbooks.md)
-  * Python scripts, PowerShell, SOAR workflows, and labs (folders)
+  * [Sentinel-Automated IR Playbooks](4-Security-Automation-And-Engineering/Automated-IR-Playbooks.md)
+  * [Python-Security Automation](4-Security-Automation-And-Engineering/Python-Security-automation.md)
+  * [PowerShell-Security Automation](4-Security-Automation-And-Engineering/Powershell-security-automation.md)
+  * [SOAR Workflows](4-Security-Automation-And-Engineering/SOAR-workflows.md)
+  * [Security-Copilot Tips](4-Security-Automation-And-Engineering/security-copilot-tips.md)
 * **5 - Offensive Security**
   * [Web Pentesting](5-Offensive-Security/Web-Pentesting.md)
   * [Network Pentesting](5-Offensive-Security/Network-Pentesting.md)

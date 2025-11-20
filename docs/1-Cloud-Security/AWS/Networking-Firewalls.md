@@ -1769,3 +1769,106 @@ Remember: Security is not a one-time setup. It's an ongoing process of monitorin
 Stay curious, keep learning, and always ask "how could this be exploited?"
 
 ---
+
+Of course. The visually coherent diagram that better represents the defense-in-depth layers of AWS security.
+
+The key improvements are:
+*   **Structured Flow:** Groups services into logical security domains that build upon each other.
+*   **Clearer Dependencies:** Uses directional arrows to show how controls in one layer enable or feed into the next.
+*   **Standardized Terminology:** Uses common security pillars (Identity, Infrastructure, Data, etc.).
+*   **Enhanced Readability:** Better formatting and grouping.
+
+Here is the revised visual diagram and its code.
+
+### Visual Diagram: AWS Security Reference Architecture
+
+```mermaid
+flowchart TD
+    subgraph A1 [Governance Foundation]
+        direction LR
+        A11[AWS Organizations] --> A12[Control Tower]
+        A12 --> A13[Guardrails SCPs & Policies]
+    end
+
+    subgraph A2 [Identity & Access Management]
+        direction LR
+        A21[AWS IAM] --> A22[IAM Roles & Policies]
+        A23[AWS IAM Identity Center] --> A24[Multi-Account Access]
+    end
+
+    subgraph B1 [Infrastructure Protection]
+        direction TB
+        B11[VPC Design] --> B12[Security Groups & NACLs]
+        B12 --> B13[AWS Network Firewall]
+        B13 --> B14[Route53 Resolver DNS Firewall]
+    end
+
+    subgraph B2 [Data Protection]
+        direction LR
+        B21[Encryption at Rest<br/>KMS, SSE-S3, SSE-KMS] --> B22[Encryption in Transit TLS]
+        B22 --> B23[Secrets Manager<br/>& Parameter Store]
+    end
+
+    subgraph C1 [Threat Detection & Monitoring]
+        C11[AWS CloudTrail] --> C12[AWS GuardDuty]
+        C13[AWS Config] --> C14[AWS Security Hub]
+        C12 --> C14
+        C14 --> C15[Amazon Detective]
+    end
+
+    subgraph C2 [Vulnerability Management]
+        direction LR
+        C21[AWS Inspector] --> C22[Amazon Macie]
+        C23[Code Scans SAST/DAST] --> C24[ECR Image Scanning]
+    end
+
+    subgraph D [DevSecOps & Automation]
+        direction LR
+        D1[Infrastructure as Code IaC Scans] --> D2[CI/CD Pipeline with Security Gates]
+        D2 --> D3[Automated Compliance Checks AWS Config]
+    end
+
+    subgraph E [Incident Response]
+        direction LR
+        E1[Playbooks in<br/>Systems Manager & Lambda] --> E2[Forensics with Detective & EBS Snapshots]
+        E2 --> E3[Automated Remediation EventBridge & Lambda]
+    end
+
+    A1 --> A2
+    A2 --> B1
+    A2 --> B2
+    B1 --> C1
+    B2 --> C1
+    B1 --> C2
+    B2 --> C2
+    C1 --> E
+    C2 --> D
+    D --> C2
+```
+
+---
+
+### Explanation of the Security Layers
+
+This diagram visualizes a multi-layered (defense-in-depth) security approach on AWS.
+
+**1. Governance Foundation (A1)**
+*   This is the bedrock. **AWS Organizations** allows you to centrally manage multiple accounts. **AWS Control Tower** automates the setup of a secure, multi-account "Landing Zone" with mandatory **Guardrails (SCPs)** that enforce security policies across all accounts.
+
+**2. Identity & Access Management (A2)**
+*   The first line of defense. **AWS IAM** controls fine-grained access for users and applications using roles and policies. **IAM Identity Center** provides single sign-on (SSO) for centralized human access to multiple accounts and cloud applications.
+
+**3. Infrastructure & Data Protection (B1 & B2)**
+*   These are the core preventative controls.
+    *   **Infrastructure (B1):** Protects your network. It starts with a well-architected **VPC**, uses **Security Groups & NACLs** as firewalls, and can be enhanced with advanced services like **Network Firewall** and **DNS Firewall**.
+    *   **Data Protection (B2):** Safeguards your data itself. This involves encrypting data both at rest (using **KMS**) and in transit (using **TLS**), and securely managing credentials with **Secrets Manager**.
+
+**4. Threat Detection & Vulnerability Management (C1 & C2)**
+*   These are the detective controls that work continuously.
+    *   **Threat Detection (C1):** A powerful pipeline where **CloudTrail** (audit logs) and **Config** (resource inventory) feed into **GuardDuty** (threat intelligence) and **Security Hub** (centralized dashboard), with **Detective** for deep-dive investigations.
+    *   **Vulnerability Management (C2):** Proactively finds weaknesses. **Inspector** scans workloads for vulnerabilities, **Macie** finds sensitive data exposed in S3, and scans are integrated into the development lifecycle.
+
+**5. DevSecOps & Incident Response (D & E)**
+*   These represent the continuous cycle of improvement and preparedness.
+    *   **DevSecOps (D):** "Shifts security left" by embedding security scans for infrastructure code (**IaC**) and application code into the **CI/CD pipeline**.
+    *   **Incident Response (E):** Prepares you for security events. Uses automation (**SSM, Lambda**) to run playbooks, **Detective** to understand the scope, and automated tools to contain and remediate.

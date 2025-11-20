@@ -1,10 +1,5 @@
 # Azure Entra ID Security
 
-Focus
-- Conditional Access, PIM, Identity Protection, block legacy auth.
-
-Operational tips
-- Enforce MFA, review risky sign-ins, minimize privileged accounts.
 
 Zero Trust demonstrates a modern, security-focused mindset principles.
 
@@ -18,9 +13,9 @@ This diagram illustrates the continuous verification process for a user trying t
 
 ```mermaid
 graph TD
-    A[User Requests Access] --> B{Device Compliant?<br>(Intune/MDM)};
+    A[User Requests Access] --> B{Device Compliant?<br>Intune/MDM};
     B -- No --> C[Access Blocked];
-    B -- Yes --> D[Entra ID Checks:<br>- Strong Auth (MFA)<br>- User Risk<br>- Sign-in Risk<br>- Location];
+    B -- Yes --> D[Entra ID Checks:<br>- Strong Auth -MFA<br>- User Risk<br>- Sign-in Risk<br>- Location];
     
     D --> E{Risks & Conditions<br>Evaluated};
     E -- High Risk --> F[Block Access / Require<br>Password Change];

@@ -14,6 +14,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./_themes/custom.css">
 
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  
+
   <!-- Docsify plugins: search, mermaid, pagination -->
   <script>
     window.$docsify = {
@@ -21,7 +24,6 @@
       repo: 'https://github.com/MPurushotham/my-cybersecurity-journey',
       loadSidebar: true,
       nativeEmoji: true,
-      subMaxLevel: 2,
       autoHeader: true,
       search: 'auto',
       executeScript: true,
@@ -37,15 +39,21 @@
         }
       ]
     };
+
   </script>
-  
+    <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true });
+    window.mermaid = mermaid;
+  </script>
+  <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
 </head>
 <body>
   <div id="app"></div>
-
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-  <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>

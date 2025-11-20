@@ -1,11 +1,3 @@
-# AWS IAM Security
-
-Essentials
-- Use roles over long-lived keys, enforce MFA, least privilege, permission boundaries.
-
-Monitoring
-- Enable CloudTrail, IAM Access Analyzer; review policies and access keys regularly.
-
 # AWS IAM Security Essentials - Complete Guide
 
 *A practical, hands-on guide to securing your AWS environment*
@@ -1535,3 +1527,4 @@ Stay secure! 🔒
 *Author: Purushotham Muktha*
 
 *For questions or updates, contact: Owner of the page repo*
+
