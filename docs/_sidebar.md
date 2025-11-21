@@ -6,7 +6,7 @@
   * [Core Networking Basics](0-Linux/Computers-Networking.md)
   * [Digital-Cryptography-PKI](0-Linux/Modern-Cryptography-PKI.md)
 * **TryHackMe**
-  * [Tryhackme-Labs](TryHackMe/tryhackme-labs.md)
+  * [Tryhackme-Labs](TryHackMe-Labs/tryhackme-labs.md)
 * **1 - Cloud Security**
     * **Kubernetes Security**
     * [K8s Architecture-Enterprise](1-Cloud-Security/Kubernetes-Security/Kubernetes-Architecture-Enterprise.md)
