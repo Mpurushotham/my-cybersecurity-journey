@@ -1,7 +1,6 @@
 # TryHackMe.com - Cybersecurity Learning Platform
 
-# Click here to go bottom of the page --> [TryHackMe.com - Solved rooms and labs Solutions](#tryhackmecom---solved-rooms-and-labs-solutions)
-
+# Click here to go bottom of the page --> [TryHackMe.com - Solved rooms and labs Solutions]
 ## Overview about the Platform
 
 **TryHackMe.com** is an online platform for learning and teaching cybersecurity through hands-on, interactive labs and virtual environments. It provides a gamified approach to cybersecurity education suitable for beginners to advanced practitioners.
