@@ -11,11 +11,12 @@ flowcard TD
         A1["Learning Paths<br>Structured Curriculum"] --> B1["Virtual Rooms<br>Hands-on Labs"]
         A2["Skill Assessments<br>Knowledge Checks"] --> B2["Challenges<br>CTF-Style Exercises"]
         A3["Community<br>Discord & Forums"] --> B3["Career Paths<br>Role-Specific Training"]
-        
+    
         B1 --> C1["Progressive Difficulty<br>Beginner to Advanced"]
         B2 --> C2["Real-World Scenarios<br>Practical Application"]
         B3 --> C3["Industry Recognition<br>Skill Validation"]
     end
+    
 ```
 
 ## Key Features

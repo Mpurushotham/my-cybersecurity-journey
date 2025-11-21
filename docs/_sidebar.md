@@ -14,7 +14,7 @@
     * [RBAC & NetworkPolicies](1-Cloud-Security/Kubernetes-Security/RBAC-NetworkPolicies.md)
     * [Container Hardening](1-Cloud-Security/Kubernetes-Security/Container-Hardening.md)
     * **Cloud-Architecture Design Ref.**
-    * [Systems Architecture Design Reference](1-Cloud-Security/Systems-Solution-Design-Architecture.md)
+    * [Systems Architecture Design Reference](1-Cloud-Security/Systems-Architecture-Design.md)
   * **AWS**
     * [IAM Security](1-Cloud-Security/AWS/IAM-Security.md)
     * [Networking & Firewalls](1-Cloud-Security/AWS/Networking-Firewalls.md)
@@ -95,7 +95,7 @@
   * [Stakeholder Management](12-Soft-Skills-Professional/Stakeholder-Management.md)
   * [Project Management](12-Soft-Skills-Professional/Project-Management.md)
 * **13 - Demand Job Roles**
-  * [#1 Interview Reference Guide](13-Demand-Job-Roles/Interview-Reference-guide.md)
+  * [#1 Interview Reference Guide](13-Demand-Job-Roles/#1-Interview-Reference-guide.md)
   * [AI Security Engineer](13-Demand-Job-Roles/AI-Security-Engineer.md)
   * [Cloud Security Engineer](13-Demand-Job-Roles/Cloud-Security-Engineer.md)
   * [IAM Architect](13-Demand-Job-Roles/IAM-Architect.md)
