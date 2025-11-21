@@ -1,5 +1,4 @@
 
-```markdown
 # Enterprise Cloud & Hybrid Networking Architecture
 
 ## Network Resilience Architecture with Security Protocols
@@ -238,8 +237,8 @@ flowchart TD
 
 ---
 
-*This architecture provides enterprise-grade networking with built-in resilience, security, and hybrid cloud integration following industry best practices.*
-```
+* *This architecture provides enterprise-grade networking with built-in resilience, security, and hybrid cloud integration following industry best practices.*
+
 
 This markdown file includes:
 
@@ -270,6 +269,7 @@ This markdown file includes:
    - Monitoring framework
    - Performance KPIs
 
+--------
 
 
 # ✍️ Computer Networking – Fundamentals
