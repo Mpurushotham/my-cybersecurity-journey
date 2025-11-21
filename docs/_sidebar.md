@@ -13,7 +13,8 @@
     * [K8s Architecture Security Focused](1-Cloud-Security/Kubernetes-Security/K8s-Architecture-Security-Focused.md)
     * [RBAC & NetworkPolicies](1-Cloud-Security/Kubernetes-Security/RBAC-NetworkPolicies.md)
     * [Container Hardening](1-Cloud-Security/Kubernetes-Security/Container-Hardening.md)
-  * [Systems Architecture Design](1-Cloud-Security/Systems-Solution-Design-Architecture.md)
+    * **Cloud Systems Architecture Designs Ref.**
+    * [Systems Architecture Design Reference](1-Cloud-Security/Systems-Solution-Design-Architecture.md)
   * **AWS**
     * [IAM Security](1-Cloud-Security/AWS/IAM-Security.md)
     * [Networking & Firewalls](1-Cloud-Security/AWS/Networking-Firewalls.md)
