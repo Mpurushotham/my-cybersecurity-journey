@@ -95,7 +95,7 @@
   * [Stakeholder Management](12-Soft-Skills-Professional/Stakeholder-Management.md)
   * [Project Management](12-Soft-Skills-Professional/Project-Management.md)
 * **13 - Demand Job Roles**
-  * [#1 Interview Reference Guide](13-Demand-Job-Roles/#1-Interview-Reference-guide.md)
+  * [#1 Interview Reference Guide](13-Demand-Job-Roles/Interview-Reference-guide.md)
   * [AI Security Engineer](13-Demand-Job-Roles/AI-Security-Engineer.md)
   * [Cloud Security Engineer](13-Demand-Job-Roles/Cloud-Security-Engineer.md)
   * [IAM Architect](13-Demand-Job-Roles/IAM-Architect.md)
