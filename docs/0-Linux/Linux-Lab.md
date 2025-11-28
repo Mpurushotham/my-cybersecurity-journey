@@ -1,7 +1,8 @@
 
 # Linux Lab Guide — Zero to Hero
 
-A structured, GitHub-friendly Markdown reformat of the Linux lab guide. Each lab contains Theory, Objectives, Quick Commands / Solutions and Practice exercises. Use this file as the canonical README for the docs/0-Linux lab folder.
+I have documented the well structured notes for you to learn basics before dive into cybersecurity its essential foundations for anything.
+
 
 ---
 
