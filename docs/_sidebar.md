@@ -1,9 +1,9 @@
 * [Home](/)
 * **Personal Digital Defense**
   * [Personal Digital Defense](00-Personal-Digital-Defense/Personal-Digital-Defense.md)
-* **0-Linux Lab**
+* **0-Linux**
   * [Linux 101](0-Linux/Linux-Lab.md)
-  * [Python 101](python-comprehensive-guide.md)
+  * [Python 101](0-Linux/python-comprehensive-guide.md)
   * [Core Networking Basics](0-Linux/Computers-Networking.md)
   * [Digital-Cryptography-PKI](0-Linux/Modern-Cryptography-PKI.md)
 * **TryHackMe**
