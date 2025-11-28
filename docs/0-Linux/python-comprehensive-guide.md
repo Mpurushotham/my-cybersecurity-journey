@@ -4,6 +4,11 @@
 **Author:** Purushotham Muktha  
 **Built with ❤️ to share knowledge globally**
 
+The following lists the comprehensive modules and practical examples covered in this Python guide designed for beginners to advance their programming skills step-by-step. Practical code snippets with explanations are provided for hands-on learning.
+👨‍💻
+[Python Play Ground](https://python-code-lab.vercel.app/) 
+
+
 ---
 
 ## Table of Contents
