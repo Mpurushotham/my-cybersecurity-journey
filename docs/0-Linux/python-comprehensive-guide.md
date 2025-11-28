@@ -1,4 +1,4 @@
-# Python Prodigy: From Zero to Hero
+# Python 3.0: From Zero to Hero
 ## The Complete Python Programming Guide with 500+ Practical Examples
 
 **Author:** Purushotham Muktha  
